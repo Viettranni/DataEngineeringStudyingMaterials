@@ -1,0 +1,15 @@
+-- stg_orders: the cleaned orders, one row per order. Same rules as module 01,
+-- written as one SELECT that reads from raw_orders.
+--
+-- Columns to produce (name: type):
+--   order_id:    INTEGER
+--   customer_id: text, no surrounding spaces
+--   order_date:  DATE
+--   product:     text
+--   quantity:    INTEGER
+--   unit_price:  DECIMAL(10, 2)
+--   status:      text, lowercase, no surrounding spaces
+--   total:       quantity * unit_price
+--
+-- Rows to drop: no order_id, quantity of zero or less, duplicates.
+
